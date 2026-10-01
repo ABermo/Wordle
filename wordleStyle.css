@@ -2,3 +2,26 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+hr {
+    align-self: center;
+    width: 40vw;
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.1vw;
+}
+
+#board {
+    margin: 0 auto;
+    margin-top: 1vh;
+    width: 36vw;
+    height: 65vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Temporary feature to see board placement */
+    background-color: green;
+}
