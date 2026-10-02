@@ -15,7 +15,6 @@ window.onload = function() {
     intialise();
 }
 
-
 function intialise() {
     for (let r = 0; r < height; r++)
     {
@@ -78,6 +77,7 @@ function intialise() {
 }
 
 
+
 function update() {
     let correct = 0;
     for (let c = 0; c < width; c++) {
@@ -114,6 +114,7 @@ function update() {
 
         if (correct == width) {
             gameOver = true;
+            document.getElementById("answer").innerText = "Correct!";
         }
     }   
 }
