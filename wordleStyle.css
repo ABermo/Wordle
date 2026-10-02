@@ -25,3 +25,38 @@ hr {
     /* Temporary feature to see board placement */
     background-color: green;
 }
+
+.tile {
+    /* Box */
+    border: 2px;
+    width: 5vw;
+    height: 5vw;
+    margin: 1vw;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.correct {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color: white;
+}
