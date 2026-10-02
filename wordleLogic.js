@@ -47,8 +47,55 @@ function intialise() {
                     currTile.innerText = e.code[3];
                     col += 1;
                 }
+            } 
+        }
+        else if (e.code == "Backspace")
+        {
+            if (0 < col && col <= width)
+            {
+                col -= 1;
             }
-                
+
+            let currTile = document.getElementById(row.toString() + "-" + col.toString());
+            currTile.innerText = "";
+        }
+        else if (e.code == "Enter")
+        {
+            update();
+            row += 1;
+            col = 0;
+        }
+
+
+        if (!gameOver && row == height)
+        {
+            gameOver = true;
+            document.getElementById("answer").innerText = word;
         }
     })
+}
+
+
+function update() {
+    let correct = 0;
+    for (let c = 0; c < width; c++) {
+        let currTile = document.getElementById(row.toString() + "-" + c.toString());
+        let letter = currTile.innerText;
+
+        //if letter in correct position
+        if (word[c] == letter) {
+            currTile.classList.add("correct");
+            correct += 1;
+        } // check if in the word
+        else if (word.includes(letter)) {
+            currTile.classList.add("present");
+        }
+        else {
+            currTile.classList.add("absent");
+        }
+
+        if (correct == width) {
+            gameOver = true;
+        }
+    }   
 }
