@@ -16,22 +16,19 @@ hr {
 
 #board {
     margin: 0 auto;
-    margin-top: 1vh;
-    width: 36vw;
-    height: 65vh;
+    margin-top: 3px;
+    width: 375px;
+    height: 420px;
     display: flex;
     flex-wrap: wrap;
-
-    /* Temporary feature to see board placement */
-    background-color: green;
 }
 
 .tile {
     /* Box */
-    border: 2px;
-    width: 5vw;
-    height: 5vw;
-    margin: 1vw;
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
 
     /* Text */
     color: black;
