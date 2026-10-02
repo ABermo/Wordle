@@ -61,9 +61,11 @@ function intialise() {
         }
         else if (e.code == "Enter")
         {
-            update();
-            row += 1;
-            col = 0;
+            if (col == width) {
+                update();
+                row += 1;
+                col = 0;
+            }
         }
 
 
@@ -88,7 +90,23 @@ function update() {
             correct += 1;
         } // check if in the word
         else if (word.includes(letter)) {
-            currTile.classList.add("present");
+            let index = word.indexOf(letter);
+            let indexTile = document.getElementById(row.toString() + "-" + index.toString());
+
+            while (index != -1) {
+                if (word[index] != indexTile.innerText) {
+                    currTile.classList.add("present");
+                    break;
+                }
+
+                index = word.indexOf(letter, index+1);
+                indexTile = document.getElementById(row.toString() + "-" + index.toString());
+
+                if (index == -1) {
+                    currTile.classList.add("absent");
+                }
+            }
+
         }
         else {
             currTile.classList.add("absent");
