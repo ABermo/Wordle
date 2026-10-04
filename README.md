@@ -10,6 +10,3 @@ Word is current manually entered, therefore same every time
 Present letters are displayed incorrectly, if there exists 2 of a letter and the guesses 3, where not all have been found correctly, all 3 are highlighted rather than 2. But when all are found, they are marked as absent
 
 Allows entering of any string of letters, entering words is not currently forced
-
-Taught by Kenny Yip Coding to build base game
-with plans to add custom features
